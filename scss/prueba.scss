@@ -1,0 +1,45 @@
+header{
+    background-image: linear-gradient(to bottom, rgb(195, 233, 211),white);
+    text-align: center; 
+    height: 180px;
+    .logo{
+        height: 130px ;
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
+    nav {
+        height: 80px;
+        text-align: center;
+        font-family: 'Lora', serif;
+    }
+    .lista {
+        list-style: none;
+        li {
+            display: inline-block;
+            width: 20%;
+            height: 50px;
+            a {
+                color:black;
+                text-decoration: none;
+                display: block;
+                padding-top: 10px;
+                height: 40px;
+            }
+            a:hover{
+                background-color: rgb(233, 57, 163);
+            }
+        }
+    }
+}
+.chat{
+    width: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
