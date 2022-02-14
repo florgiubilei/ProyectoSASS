@@ -1,0 +1,666 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header {
+  background-image: linear-gradient(to bottom, #c3e9d3, white);
+  text-align: center;
+  height: 180px; }
+  header .logo {
+    height: 130px; }
+    header .logo img {
+      height: 100%;
+      width: auto; }
+  header nav {
+    height: 80px;
+    text-align: center;
+    font-family: 'Lora', serif; }
+  header .lista {
+    list-style: none; }
+    header .lista li {
+      display: inline-block;
+      width: 20%;
+      height: 50px; }
+      header .lista li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding-top: 10px;
+        height: 40px; }
+      header .lista li a:hover {
+        background-color: #e939a3; }
+
+.chat {
+  width: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px; }
+  .chat img {
+    width: 100%;
+    height: auto; }
+
+footer {
+  text-align: center;
+  background-color: pink;
+  width: 100%; }
+
+.redes li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 5px;
+  margin-right: 10px; }
+
+.homeMixin {
+  width: auto;
+  font-family: "Quicksand", sans-serif;
+  padding-top: 10px;
+  background-image: linear-gradient(to bottom, white, pink); }
+
+.intro {
+  box-shadow: 0 0 10px black;
+  color: black;
+  border-radius: 20px; }
+
+@media only screen and (max-width: 480px) {
+  .home {
+    width: auto;
+    font-family: "Quicksand", sans-serif;
+    padding-top: 10px;
+    background-image: linear-gradient(to bottom, white, pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 1500px; }
+  .intro {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 200px;
+    text-align: center;
+    margin-left: 15px; }
+  .video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 300px; }
+  iframe {
+    width: 100%;
+    height: 90%;
+    align-items: center; }
+  .horariosPadre {
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0 0 10px black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin-left: 90px;
+    padding-right: 20px;
+    padding-top: 10px; }
+  .horarios {
+    list-style: none;
+    text-align: center; }
+  .ubicacion {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px; }
+    .ubicacion img {
+      width: 70%;
+      height: 150px; } }
+
+@media only screen and (min-width: 480px) {
+  .home {
+    width: auto;
+    font-family: "Quicksand", sans-serif;
+    padding-top: 10px;
+    background-image: linear-gradient(to bottom, white, pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 1500px; }
+  .intro {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 200px;
+    text-align: center;
+    margin-left: 65px;
+    transition: heigth 25, width 15; }
+  .intro:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 500px; }
+  .video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 600px; }
+  iframe {
+    width: 100%;
+    height: 90%;
+    align-items: center; }
+  .horariosPadre {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin-left: 150px;
+    padding-right: 30px;
+    padding-top: 10px;
+    transition: heigth 25, width 15; }
+  .horariosPadre:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 350px; }
+  .horarios {
+    list-style: none;
+    text-align: center; }
+  .ubicacion {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px; }
+    .ubicacion img {
+      width: 60%;
+      height: 200px;
+      padding-bottom: 10px; } }
+
+@media only screen and (min-width: 600px) {
+  .home {
+    width: auto;
+    font-family: "Quicksand", sans-serif;
+    padding-top: 10px;
+    background-image: linear-gradient(to bottom, white, pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 2000px; }
+  .intro {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 200px;
+    text-align: center;
+    margin-left: 150px;
+    transition: heigth 25, width 15; }
+  .intro:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 500px; }
+  .video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 600px; }
+  iframe {
+    width: 100%;
+    height: 90%;
+    align-items: center; }
+  .horariosPadre {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin-left: 250px;
+    padding-right: 30px;
+    padding-top: 10px;
+    transition: heigth 25, width 15; }
+  .horariosPadre:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 350px; }
+  .horarios {
+    list-style: none;
+    text-align: center; }
+  .ubicacion {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px; }
+    .ubicacion img {
+      width: 60%;
+      height: 200px;
+      padding-bottom: 10px; } }
+
+@media only screen and (min-width: 768px) {
+  .home {
+    width: auto;
+    font-family: "Quicksand", sans-serif;
+    padding-top: 10px;
+    background-image: linear-gradient(to bottom, white, pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 3000px; }
+  .intro {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 200px;
+    text-align: center;
+    margin-left: 300px;
+    transition: heigth 25, width 15; }
+  .intro:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 500px; }
+  .video {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  iframe {
+    width: 80%;
+    height: 100%; }
+  .horariosPadre {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin-left: 360px;
+    padding-right: 30px;
+    padding-top: 10px;
+    transition: heigth 25, width 15; }
+  .horariosPadre:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 350px; }
+  .horarios {
+    list-style: none;
+    text-align: center; }
+  .ubicacion {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    height: 600px; }
+    .ubicacion img {
+      margin-top: 10px;
+      width: 50%;
+      height: 300px; } }
+
+@media only screen and (min-width: 992px) {
+  .home {
+    width: auto;
+    font-family: "Quicksand", sans-serif;
+    padding-top: 10px;
+    background-image: linear-gradient(to bottom, white, pink);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 3000px; }
+  .intro {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 200px;
+    text-align: center;
+    margin-left: 300px;
+    transition: heigth 25, width 15; }
+  .intro:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 500px; }
+  .video {
+    display: flex;
+    flex-direction: column;
+    width: 992px;
+    height: 1000px;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  iframe {
+    width: 80%;
+    height: 100%; }
+  .horariosPadre {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin-left: 360px;
+    padding-right: 30px;
+    padding-top: 10px;
+    transition: heigth 25, width 15; }
+  .horariosPadre:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 250px;
+    width: 350px; }
+  .horarios {
+    list-style: none;
+    text-align: center; }
+  .ubicacion {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    height: 600px; }
+    .ubicacion img {
+      margin-top: 10px;
+      width: 50%;
+      height: 300px; } }
+
+@media only screen and (min-width: 1024px) {
+  .home {
+    width: auto;
+    font-family: "Quicksand", sans-serif;
+    padding-top: 10px;
+    background-image: linear-gradient(to bottom, white, pink);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 25% 25%;
+    grid-template-areas: "intro video" "horarios horarios" "ubicacion ubicacion";
+    column-gap: 20px;
+    row-gap: 20px;
+    width: 100%;
+    height: 3000px;
+    align-content: center; }
+  .intro {
+    grid-area: intro;
+    margin-right: 100px;
+    width: 50%;
+    height: 300px;
+    text-align: center;
+    margin-top: 400px; }
+  .intro:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 350px;
+    width: 500px; }
+  .video {
+    grid-area: video;
+    width: 95%;
+    height: 480px;
+    margin-top: 30%; }
+  iframe {
+    width: 100%;
+    height: 100%; }
+  .horariosPadre {
+    grid-area: horarios;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    margin-left: 700px;
+    padding-right: 30px;
+    transition: heigth 25, width 15;
+    font-size: 25px; }
+  .horariosPadre:hover {
+    transition-duration: 1s;
+    background-color: black;
+    color: white;
+    height: 400px;
+    width: 600px;
+    font-size: 35px; }
+  .ubicacion {
+    grid-area: ubicacion;
+    width: 100%;
+    height: 600px; }
+    .ubicacion img {
+      width: 50%;
+      height: 300px; } }
+
+.mainCursos {
+  width: 100%;
+  background-color: #e58acb;
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 20px;
+  background-image: linear-gradient(to bottom, white, pink); }
+
+@media only screen and (max-width: 480px) {
+  .mainCursos {
+    height: 3500px; }
+  .card {
+    margin-top: 5%;
+    margin-left: 20%; } }
+
+@media only screen and (min-width: 480px) {
+  .mainCursos {
+    height: 3500px; }
+  .card {
+    margin-top: 5%;
+    margin-left: 25%; } }
+
+@media only screen and (min-width: 768px) {
+  .mainCursos {
+    height: 1800px; }
+  .card {
+    margin-top: 20%; } }
+
+@media only screen and (min-width: 1200px) {
+  .mainCursos {
+    height: 1800px; }
+  .card {
+    margin-top: 50%;
+    margin-left: 50px; } }
+
+.log {
+  background-image: linear-gradient(to bottom, white, pink);
+  font-family: 'Quicksand', sans-serif;
+  width: 100%;
+  height: 1000px; }
+
+@media only screen and (max-width: 480px) {
+  #form {
+    margin-top: 50px;
+    padding-top: 50px; } }
+
+@media only screen and (min-width: 480px) {
+  #form {
+    margin-top: 50px;
+    padding-top: 100px; } }
+
+@media only screen and (min-width: 768px) {
+  #form {
+    margin-top: 50px;
+    padding-top: 100px; }
+  #row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; } }
+
+@media only screen and (min-width: 992px) {
+  #form {
+    margin-top: 80px;
+    padding-top: 100px; }
+  #row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; } }
+
+@media only screen and (min-width: 1024px) {
+  #form {
+    margin-top: 100px;
+    padding-top: 100px; }
+  #row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; } }
+
+.mainTienda {
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 20px;
+  background-image: linear-gradient(to bottom, white, pink); }
+
+.titulo {
+  text-align: center;
+  margin-top: 10%; }
+
+@media only screen and (max-width: 480px) {
+  .mainTienda {
+    height: 5300px; }
+  #tarjetas {
+    height: 500px;
+    width: 100%; }
+  .card {
+    width: 200px;
+    margin-top: 10%;
+    margin-left: 105px; } }
+
+@media only screen and (min-width: 480px) {
+  .mainTienda {
+    height: 5000; }
+  .card {
+    width: 200px;
+    margin-top: 10%;
+    margin-left: 150px; }
+  #tarjetas {
+    height: 500px;
+    width: 350px; } }
+
+@media only screen and (min-width: 768px) {
+  .mainTienda {
+    height: 4000; }
+  .card {
+    width: 300px;
+    margin-top: 10%;
+    margin-left: 0;
+    margin-bottom: 10px; }
+  #tarjetas {
+    width: 350px; } }
+
+@media only screen and (min-width: 1200px) {
+  .mainTienda {
+    height: 3500; }
+  .card {
+    width: 250px;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-bottom: 10px; }
+  #tarjetas {
+    width: 350px; } }
+
+.mainRecetas {
+  width: 100%;
+  background-color: #e58acb;
+  font-family: 'Quicksand', sans-serif;
+  padding-top: 20px;
+  background-image: linear-gradient(to bottom, white, pink); }
+
+#carouselExampleCaptions.carousel.slide {
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  box-shadow: 0 0 20px black;
+  border-radius: 20px; }
+  #carouselExampleCaptions.carousel.slide img {
+    border-radius: 20px;
+    height: 100%; }
+
+.recetas h1 {
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: 10%; }
+
+.recetas h2 {
+  margin-bottom: 10%;
+  margin-top: 10%; }
+
+.pasos {
+  width: 100%;
+  margin-top: 10%; }
+  .pasos ol {
+    list-style: none;
+    padding-top: 20px; }
+
+.advertencia {
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  background-color: white;
+  height: 150px; }
+
+@media only screen and (max-width: 480px) {
+  .mainRecetas {
+    height: 2900px; }
+  #carouselExampleCaptions.carousel.slide {
+    height: 269px; }
+  .advertencia {
+    width: 400px;
+    margin-left: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 5px; } }
+
+@media only screen and (min-width: 480px) {
+  .mainRecetas {
+    height: 2900px; }
+  #carouselExampleCaptions.carousel.slide {
+    height: 430px; }
+  .advertencia {
+    width: 500px;
+    margin-left: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px; } }
+
+@media only screen and (min-width: 768px) {
+  .mainRecetas {
+    height: 3300px; }
+  #carouselExampleCaptions.carousel.slide {
+    height: 665px; }
+  .advertencia {
+    width: 600px;
+    margin-left: 250px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px; } }
+
+@media only screen and (min-width: 1200px) {
+  .mainRecetas {
+    height: 4300px; }
+  #carouselExampleCaptions.carousel.slide {
+    height: 665px; }
+  .advertencia {
+    width: 600px;
+    margin-left: 550px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px; } }
