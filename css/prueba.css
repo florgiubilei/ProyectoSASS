@@ -3,480 +3,402 @@
   padding: 0; }
 
 header {
-  background-image: linear-gradient(to bottom, #c3e9d3, white);
-  text-align: center;
-  height: 180px; }
-  header .logo {
-    height: 130px; }
-    header .logo img {
-      height: 100%;
-      width: auto; }
-  header nav {
-    height: 80px;
+  position: relative;
+  z-index: 10000;
+  background-image: url(/img/local.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 480px; }
+  header #logotipo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
-    font-family: 'Lora', serif; }
-  header .lista {
-    list-style: none; }
-    header .lista li {
-      display: inline-block;
-      width: 20%;
-      height: 50px; }
-      header .lista li a {
-        color: black;
-        text-decoration: none;
-        display: block;
-        padding-top: 10px;
-        height: 40px; }
-      header .lista li a:hover {
-        background-color: #e939a3; }
-
-.chat {
-  width: 50px;
-  position: fixed;
-  right: 10px;
-  bottom: 10px; }
-  .chat img {
     width: 100%;
-    height: auto; }
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.363); }
+    header #logotipo .parrafo1 {
+      font-family: "Allerta Stencil", sans-serif;
+      color: #d3d2d2;
+      letter-spacing: .01em;
+      font-size: 15px; }
+    header #logotipo .parrafo2 {
+      font-family: "Allerta Stencil", sans-serif;
+      color: #d3d2d2;
+      padding-top: 10px; }
+    header #logotipo h1 {
+      color: white;
+      font-family: "Damion", cursive;
+      font-size: 70px; }
+  header nav {
+    height: 15%;
+    padding-top: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.363);
+    z-index: 10; }
+    header nav .lista {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      width: 40%; }
+      header nav .lista li {
+        width: 100%;
+        margin-top: 10px; }
+        header nav .lista li a {
+          color: white;
+          text-decoration: none;
+          font-family: "Merriweather", serif;
+          font-size: 15px; }
+        header nav .lista li a:hover {
+          color: orange; }
+    header nav .container-fluid {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      header nav .container-fluid a {
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        font-family: "Berkshire Swash", cursive; }
+        header nav .container-fluid a:hover {
+          color: orange; }
+    header nav .lista2 {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+      padding-right: 30px; }
+      header nav .lista2 li {
+        width: 100%;
+        margin-top: 10px; }
+        header nav .lista2 li a {
+          color: white;
+          text-decoration: none;
+          font-family: "Merriweather", serif;
+          font-size: 15px; }
+        header nav .lista2 li a:hover {
+          color: orange; }
+
+@media only screen and (max-width: 576px) {
+  header nav .lista {
+    flex-direction: column; }
+  header nav .lista2 {
+    flex-direction: column; } }
+
+@media only screen and (min-width: 576px) {
+  header nav .lista {
+    flex-direction: column; }
+  header nav .lista2 {
+    flex-direction: column; } }
+
+@media only screen and (min-width: 768px) {
+  header nav .lista {
+    flex-direction: column; }
+  header nav .lista2 {
+    flex-direction: column; } }
+
+@media only screen and (min-width: 992px) {
+  header nav .lista {
+    flex-direction: row; }
+  header nav .lista2 {
+    flex-direction: row; } }
 
 footer {
   text-align: center;
-  background-color: pink;
+  background-color: rgba(0, 0, 0, 0.938);
+  width: 100%;
+  height: 270px; }
+  footer p {
+    color: #d3d2d2;
+    font-family: "Allerta Stencil", sans-serif;
+    padding-top: 1%; }
+  footer .redes li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 2rem; }
+    footer .redes li img:hover {
+      box-shadow: 0 0 20px orange;
+      border-radius: 40px; }
+
+.home {
+  background-color: white;
   width: 100%; }
-
-.redes li {
-  list-style: none;
-  display: inline-block;
-  padding-right: 5px;
-  margin-right: 10px; }
-
-.homeMixin {
-  width: auto;
-  font-family: "Quicksand", sans-serif;
-  padding-top: 10px;
-  background-image: linear-gradient(to bottom, white, pink); }
-
-.intro {
-  box-shadow: 0 0 10px black;
-  color: black;
-  border-radius: 20px; }
-
-@media only screen and (max-width: 480px) {
-  .home {
-    width: auto;
-    font-family: "Quicksand", sans-serif;
-    padding-top: 10px;
-    background-image: linear-gradient(to bottom, white, pink);
+  .home .pt-7 {
+    padding-top: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 1500px; }
-  .intro {
+    justify-content: center; }
+    .home .pt-7 div {
+      text-align: center; }
+      .home .pt-7 div hr {
+        color: orange;
+        height: 3px;
+        width: 10%;
+        margin-left: 45%; }
+      .home .pt-7 div .fs-lg {
+        font-family: "Beth Ellen", cursive;
+        color: black;
+        font-size: 40px; }
+      .home .pt-7 div .mb-2 {
+        font-family: "Beth Ellen", cursive; }
+      .home .pt-7 div .mb-0 {
+        font-family: "Aladin", cursive;
+        font-size: 20px; }
+  .home #galeria {
+    margin-top: 5%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(255, 166, 0, 0.486); }
+    .home #galeria .col-12 hr {
+      color: black;
+      height: 3px;
+      width: 10%;
+      margin-left: 45%; }
+    .home #galeria .col-12 .mb-2 {
+      font-family: "Allerta Stencil", sans-serif;
+      color: black;
+      font-size: 35px;
+      margin-top: 5%; }
+    .home #galeria .col-12 .mb-6 {
+      font-family: "Aladin", cursive;
+      color: black;
+      font-size: 20px; }
+    .home #galeria .row.gx-3 {
+      position: relative;
+      height: 65%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap; }
+      .home #galeria .row.gx-3 .img-fluid {
+        box-shadow: 0 0 20px black; }
+        .home #galeria .row.gx-3 .img-fluid:hover {
+          width: 150%;
+          height: 150%; }
+  .home .horarios {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    height: 200px;
+    width: 100%;
     text-align: center;
-    margin-left: 15px; }
-  .video {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 300px; }
-  iframe {
-    width: 100%;
-    height: 90%;
-    align-items: center; }
-  .horariosPadre {
-    border-radius: 20px;
-    color: black;
-    box-shadow: 0 0 10px black;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 200px;
-    margin-left: 90px;
-    padding-right: 20px;
-    padding-top: 10px; }
-  .horarios {
-    list-style: none;
-    text-align: center; }
-  .ubicacion {
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 200px; }
-    .ubicacion img {
-      width: 70%;
-      height: 150px; } }
+    background-color: rgba(128, 128, 128, 0.363); }
+    .home .horarios hr {
+      color: orange;
+      height: 3px;
+      width: 10%;
+      margin-left: 45%;
+      margin-top: 5%; }
+    .home .horarios #background-video {
+      width: 93vw;
+      height: 50vh;
+      object-fit: cover;
+      box-shadow: 0 0 20px black; }
+    .home .horarios h4 {
+      margin-top: 5%;
+      font-family: "Allerta Stencil", sans-serif;
+      font-size: 30px;
+      margin-bottom: 8%;
+      z-index: 1;
+      color: black; }
+    .home .horarios p {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      z-index: 1; }
+    .home .horarios .number:hover {
+      color: orange;
+      font-size: 22px; }
+    .home .horarios iframe {
+      box-shadow: 0 0 20px black; }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 576px) {
   .home {
-    width: auto;
-    font-family: "Quicksand", sans-serif;
-    padding-top: 10px;
-    background-image: linear-gradient(to bottom, white, pink);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 1500px; }
-  .intro {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    height: 200px;
-    text-align: center;
-    margin-left: 65px;
-    transition: heigth 25, width 15; }
-  .intro:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 250px;
-    width: 500px; }
-  .video {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 600px; }
-  iframe {
-    width: 100%;
-    height: 90%;
-    align-items: center; }
-  .horariosPadre {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 200px;
-    margin-left: 150px;
-    padding-right: 30px;
-    padding-top: 10px;
-    transition: heigth 25, width 15; }
-  .horariosPadre:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 250px;
-    width: 350px; }
+    height: 3250px; }
+  #galeria {
+    height: 1150px; }
+    #galeria #img1 {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 1; }
+    #galeria #img2 {
+      position: absolute;
+      left: 275px;
+      top: 0px;
+      z-index: 1; }
+    #galeria #img3 {
+      position: absolute;
+      left: 0px;
+      top: 405px;
+      z-index: 1; }
+    #galeria #img4 {
+      position: absolute;
+      left: 0px;
+      top: 600px;
+      z-index: 1; }
+    #galeria #img5 {
+      position: absolute;
+      left: 275px;
+      top: 400px;
+      z-index: 1; }
+    #galeria #img6 {
+      position: absolute;
+      left: 0px;
+      top: 790px;
+      z-index: 1; }
+    #galeria #img7 {
+      position: absolute;
+      left: 275px;
+      top: 610px;
+      z-index: 1; }
+    #galeria #img8 {
+      position: absolute;
+      left: 275px;
+      top: 792px;
+      z-index: 1; }
   .horarios {
-    list-style: none;
-    text-align: center; }
-  .ubicacion {
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 300px; }
-    .ubicacion img {
-      width: 60%;
-      height: 200px;
-      padding-bottom: 10px; } }
+    height: 43%; }
+    .horarios iframe {
+      width: 90vw;
+      height: 60vh; } }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 576px) {
   .home {
-    width: auto;
-    font-family: "Quicksand", sans-serif;
-    padding-top: 10px;
-    background-image: linear-gradient(to bottom, white, pink);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 2000px; }
-  .intro {
+    height: 3220px; }
+  #galeria .row.gx-3 {
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    height: 200px;
-    text-align: center;
-    margin-left: 150px;
-    transition: heigth 25, width 15; }
-  .intro:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 250px;
-    width: 500px; }
-  .video {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 600px; }
-  iframe {
-    width: 100%;
-    height: 90%;
-    align-items: center; }
-  .horariosPadre {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 200px;
-    margin-left: 250px;
-    padding-right: 30px;
-    padding-top: 10px;
-    transition: heigth 25, width 15; }
-  .horariosPadre:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 250px;
-    width: 350px; }
+    padding-left: 2rem;
+    height: 1300px; }
+    #galeria .row.gx-3 #img3 {
+      width: 50%;
+      padding-left: 3rem; }
+    #galeria .row.gx-3 #img4 {
+      padding-left: 3rem; }
+    #galeria .row.gx-3 #img5 {
+      padding-left: 2.5rem; }
+    #galeria .row.gx-3 #img6 {
+      padding-left: 3rem; }
+    #galeria .row.gx-3 #img7 {
+      padding-left: 2.5rem; }
+    #galeria .row.gx-3 #img8 {
+      padding-left: 3rem; }
   .horarios {
-    list-style: none;
-    text-align: center; }
-  .ubicacion {
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 300px; }
-    .ubicacion img {
-      width: 60%;
-      height: 200px;
-      padding-bottom: 10px; } }
+    height: 38%; }
+    .horarios iframe {
+      width: 90vw;
+      height: 60vh; } }
 
 @media only screen and (min-width: 768px) {
   .home {
-    width: auto;
-    font-family: "Quicksand", sans-serif;
-    padding-top: 10px;
-    background-image: linear-gradient(to bottom, white, pink);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     height: 3000px; }
-  .intro {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    height: 200px;
-    text-align: center;
-    margin-left: 300px;
-    transition: heigth 25, width 15; }
-  .intro:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 250px;
-    width: 500px; }
-  .video {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px; }
-  iframe {
-    width: 80%;
-    height: 100%; }
-  .horariosPadre {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 200px;
-    margin-left: 360px;
-    padding-right: 30px;
-    padding-top: 10px;
-    transition: heigth 25, width 15; }
-  .horariosPadre:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 250px;
-    width: 350px; }
+    .home .col-md-5 {
+      border: 3px solid white; }
   .horarios {
-    list-style: none;
-    text-align: center; }
-  .ubicacion {
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    width: 100%;
-    height: 600px; }
-    .ubicacion img {
-      margin-top: 10px;
-      width: 50%;
-      height: 300px; } }
+    height: 45%; } }
 
 @media only screen and (min-width: 992px) {
   .home {
-    width: auto;
-    font-family: "Quicksand", sans-serif;
-    padding-top: 10px;
-    background-image: linear-gradient(to bottom, white, pink);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 3000px; }
-  .intro {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    height: 200px;
-    text-align: center;
-    margin-left: 300px;
-    transition: heigth 25, width 15; }
-  .intro:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 250px;
-    width: 500px; }
-  .video {
-    display: flex;
-    flex-direction: column;
-    width: 992px;
-    height: 1000px;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px; }
-  iframe {
-    width: 80%;
-    height: 100%; }
-  .horariosPadre {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 200px;
-    margin-left: 360px;
-    padding-right: 30px;
-    padding-top: 10px;
-    transition: heigth 25, width 15; }
-  .horariosPadre:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 250px;
-    width: 350px; }
+    height: 3550px; }
   .horarios {
-    list-style: none;
-    text-align: center; }
-  .ubicacion {
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    width: 100%;
-    height: 600px; }
-    .ubicacion img {
-      margin-top: 10px;
-      width: 50%;
-      height: 300px; } }
+    height: 50%; }
+    .horarios #background-video {
+      margin-left: 1.5rem; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   .home {
-    width: auto;
-    font-family: "Quicksand", sans-serif;
-    padding-top: 10px;
-    background-image: linear-gradient(to bottom, white, pink);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 25% 25%;
-    grid-template-areas: "intro video" "horarios horarios" "ubicacion ubicacion";
-    column-gap: 20px;
-    row-gap: 20px;
-    width: 100%;
-    height: 3000px;
-    align-content: center; }
-  .intro {
-    grid-area: intro;
-    margin-right: 100px;
-    width: 50%;
-    height: 300px;
-    text-align: center;
-    margin-top: 400px; }
-  .intro:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 350px;
-    width: 500px; }
-  .video {
-    grid-area: video;
-    width: 95%;
-    height: 480px;
-    margin-top: 30%; }
-  iframe {
-    width: 100%;
-    height: 100%; }
-  .horariosPadre {
-    grid-area: horarios;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    height: 300px;
-    margin-left: 700px;
-    padding-right: 30px;
-    transition: heigth 25, width 15;
-    font-size: 25px; }
-  .horariosPadre:hover {
-    transition-duration: 1s;
-    background-color: black;
-    color: white;
-    height: 400px;
-    width: 600px;
-    font-size: 35px; }
-  .ubicacion {
-    grid-area: ubicacion;
-    width: 100%;
-    height: 600px; }
-    .ubicacion img {
-      width: 50%;
-      height: 300px; } }
+    height: 3750px; }
+    .home #galeria .row.gx-3 {
+      padding-left: 5rem;
+      justify-content: center; }
+      .home #galeria .row.gx-3 .img-fluid {
+        box-shadow: 0 0 20px black; }
+        .home #galeria .row.gx-3 .img-fluid:hover {
+          width: auto;
+          height: auto; }
+      .home #galeria .row.gx-3 .d-block {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center; }
+      .home #galeria .row.gx-3 #img1 {
+        height: 640px;
+        position: relative; }
+        .home #galeria .row.gx-3 #img1 .img-fluid {
+          height: 630px; }
+      .home #galeria .row.gx-3 #img3 {
+        margin-left: 5%;
+        width: 33.3333%; }
+      .home #galeria .row.gx-3 #img4 {
+        width: 33.3333%;
+        padding-left: 0; }
+      .home #galeria .row.gx-3 #img5 {
+        width: 33.3333%; } }
 
 .mainCursos {
+  padding-top: 5%;
   width: 100%;
-  background-color: #e58acb;
-  font-family: 'Quicksand', sans-serif;
-  padding-top: 20px;
-  background-image: linear-gradient(to bottom, white, pink); }
+  background-color: white; }
+  .mainCursos #introCursos {
+    text-align: center;
+    padding-bottom: 5%; }
+    .mainCursos #introCursos .container-fluid {
+      background-color: rgba(255, 166, 0, 0.719); }
+    .mainCursos #introCursos .hr-sm {
+      color: black;
+      height: 3px;
+      width: 40%;
+      margin-left: 30%; }
+    .mainCursos #introCursos .fs-lg {
+      font-family: "Damion", cursive; }
+    .mainCursos #introCursos .mb-2 {
+      font-family: "Beth Ellen", cursive;
+      font-size: 30px; }
+    .mainCursos #introCursos .mb-0 {
+      font-family: "Allerta Stencil", sans-serif; }
+    .mainCursos #introCursos div .media-decoration {
+      box-shadow: 0 0 20px black; }
+  .mainCursos #tarjetas {
+    background-color: rgba(0, 0, 0, 0.514); }
+  .mainCursos .card {
+    box-shadow: 0 0 20px black;
+    height: 550px; }
+    .mainCursos .card:hover {
+      box-shadow: 0 0 20px orange; }
+    .mainCursos .card img {
+      height: 350px; }
+    .mainCursos .card a:hover {
+      color: orange; }
+  .mainCursos .col-lg-4 {
+    padding-top: 2%;
+    padding-bottom: 2%; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
   .mainCursos {
-    height: 3500px; }
-  .card {
-    margin-top: 5%;
-    margin-left: 20%; } }
+    height: 4300px; }
+  .fs-lg {
+    font-size: 45px; }
+  #tarjetas {
+    height: 81.5%; }
+  .col-lg-4 {
+    padding-left: 25%; } }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 576px) {
   .mainCursos {
-    height: 3500px; }
-  .card {
-    margin-top: 5%;
-    margin-left: 25%; } }
+    height: 4300px; }
+  #tarjetas {
+    height: 80.7%;
+    width: 100%; } }
 
 @media only screen and (min-width: 768px) {
   .mainCursos {
-    height: 1800px; }
-  .card {
-    margin-top: 20%; } }
-
-@media only screen and (min-width: 1200px) {
-  .mainCursos {
-    height: 1800px; }
-  .card {
-    margin-top: 50%;
-    margin-left: 50px; } }
+    height: 2400px; }
+  #tarjetas {
+    height: 75%; }
+  .fs-lg {
+    font-size: 40px; }
+  .col-lg-4 {
+    padding-left: 5% !important; } }
 
 .log {
   background-image: linear-gradient(to bottom, white, pink);
@@ -534,35 +456,35 @@ footer {
 @media only screen and (max-width: 480px) {
   .mainTienda {
     height: 5300px; }
-  #tarjetas {
-    height: 500px;
-    width: 100%; }
-  .card {
-    width: 200px;
-    margin-top: 10%;
-    margin-left: 105px; } }
+    .mainTienda #tarjetas {
+      height: 500px;
+      width: 100%; }
+    .mainTienda .card {
+      width: 200px;
+      margin-top: 10%;
+      margin-left: 105px; } }
 
 @media only screen and (min-width: 480px) {
   .mainTienda {
     height: 5000; }
-  .card {
-    width: 200px;
-    margin-top: 10%;
-    margin-left: 150px; }
-  #tarjetas {
-    height: 500px;
-    width: 350px; } }
+    .mainTienda .card {
+      width: 200px;
+      margin-top: 10%;
+      margin-left: 150px; }
+    .mainTienda #tarjetas {
+      height: 500px;
+      width: 350px; } }
 
 @media only screen and (min-width: 768px) {
   .mainTienda {
     height: 4000; }
-  .card {
-    width: 300px;
-    margin-top: 10%;
-    margin-left: 0;
-    margin-bottom: 10px; }
-  #tarjetas {
-    width: 350px; } }
+    .mainTienda .card {
+      width: 300px;
+      margin-top: 10%;
+      margin-left: 0;
+      margin-bottom: 10px; }
+    .mainTienda #tarjetas {
+      width: 350px; } }
 
 @media only screen and (min-width: 1200px) {
   .mainTienda {

@@ -6,598 +6,549 @@
 
 //********** HEADER **********//
 header{
-    background-image: linear-gradient(to bottom, rgb(195, 233, 211),white);
-    text-align: center; 
-    height: 180px;
-    .logo{
-        height: 130px ;
-        img{
-            height: 100%;
-            width: auto;
+    position: relative;
+    z-index: 10000;
+    background-image: url(/img/local.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height: 480px;
+    #logotipo{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        text-align: center;
+        width:100%;
+        height:100%;
+        background-color: $bgcolor;
+        .parrafo1{
+            font-family: $font2;
+            color: $colorg;
+            letter-spacing: .01em;
+            font-size:15px;
+        }
+        .parrafo2{
+            font-family: $font2;
+            color: $colorg;
+            padding-top:10px;
+        }
+        h1{
+            color:white;
+            font-family: $font6;
+            font-size:70px;
         }
     }
-    nav {
-        height: 80px;
+    nav{
+        height: 15%;
+        padding-top:10px;
         text-align: center;
-        font-family: 'Lora', serif;
-    }
-    .lista {
+        display: flex;
+        flex-direction: row;
+        background-color: $bgcolor;
+        z-index: 10;
+        .lista {
         list-style: none;
-        li {
-            display: inline-block;
-            width: 20%;
-            height: 50px;
+        display: flex;
+        flex-direction: row;
+        width:40%;
+            li {
+                width: 100%;
+                margin-top: 10px;
             a {
-                color:black;
+                color:white;
                 text-decoration: none;
-                display: block;
-                padding-top: 10px;
-                height: 40px;
+                font-family: $font7;
+                font-size: 15px;
             }
             a:hover{
-                background-color: rgb(233, 57, 163);
+                color:orange;
+            }
+            }
+        }
+        .container-fluid{
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+            a{
+                font-size: 30px;
+                text-align: center;
+                color:white;
+                font-family: $font3;
+                &:hover{
+                    color:orange;
+                }
+            }
+        }
+        .lista2{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        width:40%;
+        padding-right:30px;
+            li {
+                width: 100%;
+                margin-top: 10px;
+            a {
+                color:white;
+                text-decoration: none;
+                font-family: $font7;
+                font-size: 15px;
+            }
+            a:hover{
+                color:orange;
+            }
             }
         }
     }
 }
-.chat{
-    width: 50px;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    img{
-        width: 100%;
-        height: auto;
+@media only screen and (max-width:576px){
+header{
+    nav{
+        .lista{
+            flex-direction:column;
+        }
+        .lista2{
+            flex-direction: column;
+        }
     }
-} 
+}
+}
+@media only screen and (min-width:576px){
+    header{
+        nav{
+            .lista{
+                flex-direction:column;
+            }
+            .lista2{
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media only screen and (min-width:768px){
+    header{
+        nav{
+            .lista{
+                flex-direction:column;
+            }
+            .lista2{
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media only screen and (min-width:992px){
+    header{
+        nav{
+            .lista{
+                flex-direction:row;
+            }
+            .lista2{
+                flex-direction: row;
+            }
+        }
+    }
+}
+
 
 //********** FOOTER **********//
 
 footer{
     text-align: center;
-    background-color:pink;
-    width: 100%;  
-}
-
-.redes li{
-    list-style: none;
-    display: inline-block;
-    padding-right:5px;
-    margin-right:10px;
+    background-color:rgba(0, 0, 0, 0.938);
+    width: 100%;
+    height:270px;
+    p{
+        color: $colorg;
+        font-family:$font2;
+        padding-top:1%;
+    }
+    .redes li{
+        list-style: none;
+        display: inline-block;
+        padding-right: 2rem;
+        img:hover{
+            box-shadow: 0 0 20px orange;
+            border-radius: 40px;
+        }
+    }
 }
 
 //********** HOME **********//
-
-@mixin homeMixin ($size, $font, $padding, $bgimage) {
-    width: $size;
-    font-family: $font;
-    padding-top: $padding;
-    background-image: $bgimage; 
-}
-
-%homeMixin {
-    @include homeMixin($size, $font, $padding, $bgimage);
-}
-
-.homeMixin {
-    @extend %homeMixin;
-}
-
-.intro{   
-    box-shadow: 0 0 10px black;
-    color: black;
-    border-radius: 20px;
-}
-
-//********** MEDIASQUERIES HOME **********//
-@media only screen and (max-width:480px){
-    .home{
-            @include homeMixin($size, $font, $padding, $bgimage);
+.home{
+    background-color: white;
+    width:100%;
+    .pt-7{
+        padding-top:5%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        div{ 
+            text-align: center;
+            hr{
+                color: orange;
+                height: 3px;
+                width:10%;
+                margin-left: 45%;
+            }
+            .fs-lg{
+                font-family: $font4;
+                color:black;
+                font-size: 40px;
+            }
+            .mb-2{
+                font-family: $font4;
+            }
+            .mb-0{
+                font-family: $font1;
+                font-size: 20px;
+            }
+        }
+    }
+    #galeria{
+        margin-top:5%;
+        width:100%;
+        z-index: 1;
+        background-color: rgba(255, 166, 0, 0.486);
+        .col-12{
+            hr{
+                color: black;
+                height:3px;
+                width:10%;
+                margin-left:45%;
+            }
+            .mb-2{
+                font-family:$font2;
+                color:black;
+                font-size:35px;
+                margin-top:5%;
+            }
+            .mb-6{
+                font-family: $font1;
+                color:black;
+                font-size:20px;
+            }
+        }
+        .row.gx-3{
+            position:relative;
+            height:65%;
+            width:100%;
             display:flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: 1500px;
+            flex-wrap: wrap; 
+            .img-fluid{
+                box-shadow: 0 0 20px black;
+                &:hover{
+                    width:150%;
+                    height:150%;
+                }
+            }
+        }
     }
-
-    .intro{
-        justify-content: center;
-        display:flex;
-        flex-direction: column;
-        width: 450px;
-        height: 200px;
-        text-align: center;
-        margin-left:15px;
-    }
-
-    .video{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: 300px;
-    }
-    iframe{
-        width: 100%;
-        height: 90%;
-        align-items: center;
-    }
-
-    .horariosPadre{
-        border-radius:20px;
-        color:black;
-        box-shadow: 0 0 10px black;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width:300px;
-        height: 200px;
-        margin-left:90px;
-        padding-right:20px;
-        padding-top:10px;
-    }
-
-    .horarios{
-        list-style: none;
-        text-align: center;
-    }
-
-    .ubicacion{
-        justify-content: space-around;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 200px;
-        & img {
-        width: 70%;
-        height: 150px;
-    }
-}
-}
-@media only screen and (min-width:480px){
-    .home{
-        @include homeMixin($size, $font, $padding, $bgimage);
-        display:flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 1500px;
-}
-
-.intro{
-    justify-content: center;
-    display:flex;
-    flex-direction: column;
-    width: 450px;
-    height: 200px;
+.horarios{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    width:100%;
     text-align: center;
-    margin-left:65px;
-    transition: heigth 25, width 15;
-}
- .intro:hover{
-     transition-duration: 1s;
-     background-color: black;
-     color:white;
-     height: 250px;
-     width: 500px;
- }
-
-    .video{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: 600px;
+    background-color: rgba(128, 128, 128, 0.363);
+    hr{
+        color:orange;
+        height:3px;
+        width:10%;
+        margin-left:45%;
+        margin-top:5%;
+    }
+    #background-video {
+        width: 93vw;
+        height: 50vh;
+        object-fit: cover;
+        box-shadow: 0 0 20px black;
+    }
+    h4{
+        margin-top: 5%;
+        font-family: $font2;
+        font-size:30px;
+        margin-bottom:8%;
+        z-index: 1;
+        color: black;
+    }
+    p{
+        font-family: $font9;
+        font-size:20px;
+        z-index: 1;
+    }
+    .number:hover{
+        color:orange;
+        font-size: 22px;
     }
     iframe{
-        width: 100%;
-        height: 90%;
-        align-items: center;
-    }
-
-    .horariosPadre{
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width:300px;
-        height: 200px;
-        margin-left:150px;
-        padding-right:30px;
-        padding-top:10px;
-        transition: heigth 25, width 15;
-    }
-     .horariosPadre:hover{
-         transition-duration: 1s;
-         background-color: black;
-         color:white;
-         height: 250px;
-         width: 350px;
-    }
-    .horarios{
-        list-style: none;
-        text-align: center;
-    }
-
-    .ubicacion{
-        justify-content: space-around;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 300px;
-    
-    & img{
-        width: 60%;
-        height: 200px;
-        padding-bottom: 10px;
-        
-    }
+        box-shadow: 0 0 20px black;
     }
 }
-@media only screen and (min-width:600px){
+}
+
+//********** MEDIAQUERIES HOME **********//
+@media only screen and (max-width:576px){
     .home{
-        @include homeMixin($size, $font, $padding, $bgimage);
-        display:flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 2000px;
+        height:3250px;
     }
-
-    .intro{
-        justify-content: center;
-        display:flex;
-        flex-direction: column;
-        width: 450px;
-        height: 200px;
-        text-align: center;
-        margin-left:150px;
-        transition: heigth 25, width 15;
-    
-    }
-     .intro:hover{
-         transition-duration: 1s;
-         background-color: black;
-         color:white;
-         height: 250px;
-         width: 500px;
-     }
-    
-
-
-    .video{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        height: 600px;
-    }
-    iframe{
-        width: 100%;
-        height: 90%;
-        align-items: center;
-    }
-
-    .horariosPadre{
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width:300px;
-        height: 200px;
-        margin-left:250px;
-        padding-right:30px;
-        padding-top:10px;
-        transition: heigth 25, width 15;
-    }
-     .horariosPadre:hover{
-         transition-duration: 1s;
-         background-color: black;
-         color:white;
-         height: 250px;
-         width: 350px;
-    }
+    #galeria{
+        height:1150px;
+        #img1{
+            position: absolute; 
+            left: 0px; 
+            top: 0px;
+            z-index: 1;
+            }
+        #img2{
+            position: absolute; 
+            left: 275px; 
+            top: 0px;
+            z-index: 1;
+        }
+        #img3{
+            position: absolute; 
+            left: 0px; 
+            top: 405px;
+            z-index: 1;
+            }
+        #img4{
+            position: absolute; 
+            left: 0px; 
+            top: 600px;
+            z-index: 1;
+        }
+        #img5{
+            position: absolute; 
+            left: 275px; 
+            top: 400px;
+            z-index: 1;
+        }
+        #img6{
+            position: absolute; 
+            left: 0px; 
+            top: 790px;
+            z-index: 1;
+        }
+        #img7{
+            position: absolute; 
+            left: 275px; 
+            top: 610px;
+            z-index: 1;
+        }
+        #img8{
+            position: absolute; 
+            left: 275px; 
+            top: 792px;
+            z-index: 1;
+        }
+    }    
     .horarios{
-        list-style: none;
-        text-align: center;
-    }
-
-    .ubicacion{
-        justify-content: space-around;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 300px;
-    & img{
-        width: 60%;
-        height: 200px;
-        padding-bottom: 10px;
-    }  
+        height:43%;
+        iframe{
+            width:90vw;
+            height:60vh;
+        }
     }
 }
+@media only screen and (min-width:576px){
+.home{
+    height:3220px;
+}
+#galeria{
+    .row.gx-3{
+        justify-content: center;
+        padding-left:2rem;
+        height:1300px;
+    #img3{
+        width:50%;
+        padding-left:3rem;
+        }
+    #img4{
+        padding-left:3rem;
+    }
+    #img5{
+        padding-left:2.5rem; 
+    }
+    #img6{
+        padding-left:3rem; 
+    }
+    #img7{
+        padding-left:2.5rem; 
+    }
+    #img8{
+        padding-left:3rem; 
+    }
+}
+}
+.horarios{
+    height:38%;
+    iframe{
+        width:90vw;
+        height:60vh;
+    }
+}
+}
+
 @media only screen and (min-width:768px){
-    .home{
-        @include homeMixin($size, $font, $padding, $bgimage);
-        display:flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 3000px;
-    }
-
-    .intro{
-        justify-content: center;
-        display:flex;
-        flex-direction: column;
-        width: 450px;
-        height: 200px;
-        text-align: center;
-        margin-left:300px;
-        transition: heigth 25, width 15;
-    }
-     .intro:hover{
-         transition-duration: 1s;
-         background-color: black;
-         color:white;
-         height: 250px;
-         width: 500px;
-     }
-    
-
-    .video{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        
-    }
-    iframe{
-        width: 80%;
-        height: 100%;
-    }
-
-    .horariosPadre{
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width:300px;
-        height: 200px;
-        margin-left:360px;
-        padding-right:30px;
-        padding-top:10px;
-        transition: heigth 25, width 15;
-    }
-     .horariosPadre:hover{
-         transition-duration: 1s;
-         background-color: black;
-         color:white;
-         height: 250px;
-         width: 350px;
-    }
-    .horarios{
-        list-style: none;
-        text-align: center;
-    }
-
-    .ubicacion{
-        justify-content: space-around;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-        width: 100%;
-        height: 600px;
-    & img{
-        margin-top:10px ;
-        width: 50%;
-        height: 300px;
+.home{
+    height:3000px;
+    .col-md-5{
+        border:3px solid white;
     }
 }
+.horarios{
+    height:45%;
 }
+}
+
 @media only screen and (min-width:992px){
     .home{
-        @include homeMixin($size, $font, $padding, $bgimage);
-        display:flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 3000px;
-    }
-
-    .intro{
-        justify-content: center;
-        display:flex;
-        flex-direction: column;
-        width: 450px;
-        height: 200px;
-        text-align: center;
-        margin-left:300px;
-        transition: heigth 25, width 15;
-    
-    }
-     .intro:hover{
-         transition-duration: 1s;
-         background-color: black;
-         color:white;
-         height: 250px;
-         width: 500px;
-     }
-
-    .video{
-        display: flex;
-        flex-direction: column;
-        width: 992px;
-        height: 1000px;
-        align-items: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    iframe{
-        width: 80%;
-        height: 100%;
-    }
-
-    .horariosPadre{
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width:300px;
-        height: 200px;
-        margin-left:360px;
-        padding-right:30px;
-        padding-top:10px;
-        transition: heigth 25, width 15;
-    }
-     .horariosPadre:hover{
-         transition-duration: 1s;
-         background-color: black;
-         color:white;
-         height: 250px;
-         width: 350px;
+        height:3550px;
     }
     .horarios{
-        list-style: none;
-        text-align: center;
-    }
+        height: 50%;
+        #background-video{
+            margin-left:1.5rem;
+        }
+}
+}
 
-    .ubicacion{
-        justify-content: space-around;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        margin-top: 10px;
-        width: 100%;
-        height: 600px;
-    & img{
-        margin-top:10px ;
-        width: 50%;
-        height: 300px;
-    }
-}
-}
-@media only screen and (min-width:1024px){
+@media only screen and (min-width:1200px){
     .home{
-        @include homeMixin($size, $font, $padding, $bgimage);
-        display:grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 25% 25%;
-        grid-template-areas: "intro video"
-                             "horarios horarios"
-                             "ubicacion ubicacion";
-        column-gap: 20px;
-        row-gap: 20px;
-        width: 100%;
-        height: 3000px;
-        align-content: center;
-       
-    }
-
-    .intro{
-        grid-area:intro;
-        margin-right:100px;
-        width: 50%;
-        height: 300px;
-        text-align: center;
-        margin-top:400px;
-    }
-
-     .intro:hover{
-         transition-duration: 1s;
-         background-color: black;
-         color:white;
-         height: 350px;
-         width: 500px;
-     }
-
-
-    .video{
-        grid-area: video;
-        width: 95%;
-        height: 480px;
-        margin-top: 30%;
-    }
-    iframe{
-        width: 100%;
-        height: 100%;
-    }
-
-    .horariosPadre{
-        grid-area: horarios;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        width:500px;
-        height: 300px;
-        margin-left:700px;
-        padding-right:30px;
-        transition: heigth 25, width 15;
-        font-size: 25px;
-    }
-    .horariosPadre:hover{
-         transition-duration: 1s;
-         background-color: black;
-         color:white;
-         height: 400px;
-         width: 600px;
-         font-size: 35px;
-    }
-    .ubicacion{
-        grid-area: ubicacion;
-        width: 100%;
-        height: 600px;
-    & img{
-        width: 50%;
-        height: 300px;
+        height:3750px;
+        #galeria{
+            .row.gx-3{
+                padding-left:5rem;
+                justify-content: center;
+                .img-fluid{
+                    box-shadow: 0 0 20px black;
+                    &:hover{
+                    width:auto;
+                    height:auto;
+                    }
+                }
+                .d-block{
+                    display: flex;
+                    flex-direction:column;
+                    flex-wrap: wrap;
+                    justify-content:center;
+                    
+                }
+                #img1{
+                    height:640px;
+                    position:relative;
+                    .img-fluid{
+                        height:630px;
+                    }
+                }
+                #img3{
+                    margin-left:5%;
+                    width: 33.3333%;
+                }
+                #img4{
+                    width: 33.3333%;
+                    padding-left:0;
+                }
+                #img5{
+                    width: 33.3333%;
+                }
+            }
+        }
     }
 }
-}
-
 //********** CURSOS **********//
 
 .mainCursos{
+    padding-top:5%;
     width: 100%;
-    background-color: rgb(229, 138, 203);
-    font-family: 'Quicksand', sans-serif;
-    padding-top: 20px;
-    background-image: linear-gradient(to bottom, white, pink);
-}
+    background-color:white;
+    #introCursos{
+        text-align: center;
+        padding-bottom:5%;
+        .container-fluid{
+            background-color: rgba(255, 166, 0, 0.719);
+        }
+        .hr-sm{
+                color: black;
+                height: 3px;
+                width:40%;
+                margin-left: 30%;
+            }
+        .fs-lg{
+            font-family: $font6;
+        }
+        .mb-2{
+            font-family: $font4;
+            font-size: 30px;
+        }
+        .mb-0{
+            font-family: $font2;
+        }
+        div .media-decoration{
+            box-shadow: 0 0 20px black;
+        }
+        }
+    #tarjetas{
+        background-color:rgba(0, 0, 0, 0.514);
+    }
+    .card{
+        box-shadow: 0 0 20px black;
+        &:hover{
+            box-shadow: 0 0 20px orange;
+        }
+        height:550px;
+        img{
+            height:350px;
+        }
+        a:hover{
+            color:orange;
+        }
+        }
+    .col-lg-4{
+        padding-top:2%;
+        padding-bottom:2%;
+    }
 
+}
 //********** MEDIAQUERIES CURSOS **********//
-
-@media only screen and (max-width:480px){
-    .mainCursos{
-            height: 3500px;
-    }
-    .card{
-        margin-top:5%;
-        margin-left:20%;
-    }
+@media only screen and (max-width:576px){
+.mainCursos{
+    height: 4300px;
 }
-@media only screen and (min-width:480px){
+.fs-lg{
+    font-size:45px;
+}
+    #tarjetas{
+    height:81.5%;
+}
+.col-lg-4{
+    padding-left:25%;
+}
+}
+@media only screen and (min-width:576px){
     .mainCursos{
-        height: 3500px;
+        height: 4300px;
     }
-    .card{
-        margin-top:5%;
-        margin-left:25%;
+    #tarjetas{
+        height:80.7%;
+        width:100%;
     }
 }
 @media only screen and (min-width:768px){
     .mainCursos{
-        height: 1800px;
+        height: 2400px;
     }
-    .card{
-        margin-top:20%;
+    #tarjetas{
+        height:75%;
     }
+.fs-lg{
+    font-size:40px;
 }
-@media only screen and (min-width:1200px){
-    .mainCursos{
-        height: 1800px;
-    }
-    .card{
-        margin-top:50%;
-        margin-left:50px;
-    }
+.col-lg-4{
+    padding-left:5%!important;
 }
-
+}
 //********** INGRESAR *********//
 .log{
     background-image: linear-gradient(to bottom, white, pink); 
@@ -669,7 +620,6 @@ footer{
 @media only screen and (max-width:480px){
     .mainTienda{
         height: 5300px;
-    }
     #tarjetas{
         height:500px;
         width:100%;
@@ -680,10 +630,10 @@ footer{
         margin-left: 105px;
     }
 }
+}
 @media only screen and (min-width:480px){
     .mainTienda{
         height: 5000;
-    }
     .card{
         width:200px;
         margin-top:10%;
@@ -694,10 +644,10 @@ footer{
         width:350px;
     }
 }
+}
 @media only screen and (min-width:768px){
     .mainTienda{
         height: 4000;
-    }
     .card{
         width:300px;
         margin-top:10%;
@@ -707,6 +657,7 @@ footer{
     #tarjetas{
         width:350px;
     }
+}
 }
 @media only screen and (min-width:1200px){
     .mainTienda{
