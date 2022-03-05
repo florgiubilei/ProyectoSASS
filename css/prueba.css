@@ -5,7 +5,7 @@
 header {
   position: relative;
   z-index: 10000;
-  background-image: url(img/local.jpg);
+  background-image: url(/img/local.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -17,6 +17,7 @@ header {
     text-align: center;
     width: 100%;
     height: 100%;
+    padding-top: 3rem;
     background-color: rgba(0, 0, 0, 0.363); }
     header #logotipo .parrafo1 {
       font-family: "Allerta Stencil", sans-serif;
@@ -149,6 +150,7 @@ footer {
         font-size: 20px; }
   .home #galeria {
     margin-top: 5%;
+    padding-bottom: 5%;
     width: 100%;
     z-index: 1;
     background-color: rgba(255, 166, 0, 0.486); }
@@ -166,17 +168,17 @@ footer {
       font-family: "Aladin", cursive;
       color: black;
       font-size: 20px; }
-    .home #galeria .row.gx-3 {
-      position: relative;
-      height: 65%;
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap; }
-      .home #galeria .row.gx-3 .img-fluid {
+    .home #galeria #imagenes {
+      justify-content: center !important;
+      align-items: center; }
+      .home #galeria #imagenes .img-fluid {
         box-shadow: 0 0 20px black; }
-        .home #galeria .row.gx-3 .img-fluid:hover {
-          width: 150%;
-          height: 150%; }
+      .home #galeria #imagenes #img3 {
+        margin-top: 10px;
+        margin-bottom: 10px; }
+      .home #galeria #imagenes #img5 {
+        margin-top: 10px;
+        margin-bottom: 10px; }
   .home .horarios {
     display: flex;
     flex-direction: column;
@@ -191,8 +193,7 @@ footer {
       margin-left: 45%;
       margin-top: 5%; }
     .home .horarios #background-video {
-      width: 93vw;
-      height: 50vh;
+      margin-top: 5%;
       object-fit: cover;
       box-shadow: 0 0 20px black; }
     .home .horarios h4 {
@@ -210,140 +211,67 @@ footer {
       color: orange;
       font-size: 22px; }
     .home .horarios iframe {
+      margin-bottom: 20px;
       box-shadow: 0 0 20px black; }
 
 @media only screen and (max-width: 576px) {
-  .home {
-    height: 3250px; }
-  #galeria {
-    height: 1150px; }
-    #galeria #img1 {
-      position: absolute;
-      left: 0px;
-      top: 0px;
-      z-index: 1; }
-    #galeria #img2 {
-      position: absolute;
-      left: 275px;
-      top: 0px;
-      z-index: 1; }
-    #galeria #img3 {
-      position: absolute;
-      left: 0px;
-      top: 405px;
-      z-index: 1; }
-    #galeria #img4 {
-      position: absolute;
-      left: 0px;
-      top: 600px;
-      z-index: 1; }
-    #galeria #img5 {
-      position: absolute;
-      left: 275px;
-      top: 400px;
-      z-index: 1; }
-    #galeria #img6 {
-      position: absolute;
-      left: 0px;
-      top: 790px;
-      z-index: 1; }
-    #galeria #img7 {
-      position: absolute;
-      left: 275px;
-      top: 610px;
-      z-index: 1; }
-    #galeria #img8 {
-      position: absolute;
-      left: 275px;
-      top: 792px;
-      z-index: 1; }
-  .horarios {
-    height: 43%; }
-    .horarios iframe {
-      width: 90vw;
-      height: 60vh; } }
+  #galeria div.row-justify-content-center {
+    height: 250px; }
+  #galeria #imagenes {
+    height: 80%; }
+  #background-video {
+    width: 90vw;
+    height: 40vh; }
+  iframe {
+    width: 90vw;
+    height: 50vh; } }
 
 @media only screen and (min-width: 576px) {
-  .home {
-    height: 3220px; }
-  #galeria .row.gx-3 {
-    justify-content: center;
-    padding-left: 2rem;
-    height: 1300px; }
-    #galeria .row.gx-3 #img3 {
-      width: 50%;
-      padding-left: 3rem; }
-    #galeria .row.gx-3 #img4 {
-      padding-left: 3rem; }
-    #galeria .row.gx-3 #img5 {
-      padding-left: 2.5rem; }
-    #galeria .row.gx-3 #img6 {
-      padding-left: 3rem; }
-    #galeria .row.gx-3 #img7 {
-      padding-left: 2.5rem; }
-    #galeria .row.gx-3 #img8 {
-      padding-left: 3rem; }
-  .horarios {
-    height: 38%; }
-    .horarios iframe {
-      width: 90vw;
-      height: 60vh; } }
+  #galeria #imagenes {
+    height: 88%; }
+  #background-video {
+    width: 95vw;
+    height: 70vh; }
+  iframe {
+    width: 90vw;
+    height: 40vh; } }
 
 @media only screen and (min-width: 768px) {
-  .home {
-    height: 3000px; }
-    .home .col-md-5 {
-      border: 3px solid white; }
-  .horarios {
-    height: 45%; } }
+  #inicio {
+    border: 3px solid white; }
+  #background-video {
+    width: 95vw;
+    height: 70vh; }
+  iframe {
+    width: 90vw;
+    height: 40vh; } }
 
 @media only screen and (min-width: 992px) {
-  .home {
-    height: 3550px; }
-  .horarios {
-    height: 50%; }
-    .horarios #background-video {
-      margin-left: 1.5rem; } }
+  #img1 a img {
+    height: 630px;
+    margin-left: 5%; }
+  #background-video {
+    width: 95vw;
+    height: 70vh;
+    margin-left: 2%; } }
 
 @media only screen and (min-width: 1200px) {
-  .home {
-    height: 3750px; }
-    .home #galeria .row.gx-3 {
-      padding-left: 5rem;
-      justify-content: center; }
-      .home #galeria .row.gx-3 .img-fluid {
-        box-shadow: 0 0 20px black; }
-        .home #galeria .row.gx-3 .img-fluid:hover {
-          width: auto;
-          height: auto; }
-      .home #galeria .row.gx-3 .d-block {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center; }
-      .home #galeria .row.gx-3 #img1 {
-        height: 640px;
-        position: relative; }
-        .home #galeria .row.gx-3 #img1 .img-fluid {
-          height: 630px; }
-      .home #galeria .row.gx-3 #img3 {
-        margin-left: 5%;
-        width: 33.3333%; }
-      .home #galeria .row.gx-3 #img4 {
-        width: 33.3333%;
-        padding-left: 0; }
-      .home #galeria .row.gx-3 #img5 {
-        width: 33.3333%; } }
+  #img1 {
+    height: 630px;
+    padding-left: 10%; }
+  #img2 {
+    padding-left: 10%; } }
+
+.headerCursos {
+  background-image: url(../img/local.jpg); }
 
 .mainCursos {
-  padding-top: 5%;
   width: 100%;
   background-color: white; }
   .mainCursos #introCursos {
-    text-align: center;
-    padding-bottom: 5%; }
+    text-align: center; }
     .mainCursos #introCursos .container-fluid {
-      background-color: rgba(255, 166, 0, 0.719); }
+      background-color: rgba(255, 166, 0, 0.486); }
     .mainCursos #introCursos .hr-sm {
       color: black;
       height: 3px;
@@ -353,13 +281,24 @@ footer {
       font-family: "Damion", cursive; }
     .mainCursos #introCursos .mb-2 {
       font-family: "Beth Ellen", cursive;
-      font-size: 30px; }
+      font-size: 30px;
+      padding-bottom: 5%; }
     .mainCursos #introCursos .mb-0 {
-      font-family: "Allerta Stencil", sans-serif; }
+      font-family: "Allerta Stencil", sans-serif;
+      padding-bottom: 5%; }
     .mainCursos #introCursos div .media-decoration {
       box-shadow: 0 0 20px black; }
   .mainCursos #tarjetas {
-    background-color: rgba(0, 0, 0, 0.514); }
+    background-color: rgba(0, 0, 0, 0.514);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 0;
+    margin-left: 0; }
+    .mainCursos #tarjetas .row {
+      width: 100%;
+      height: 100%;
+      align-content: space-around;
+      justify-content: center; }
   .mainCursos .card {
     box-shadow: 0 0 20px black;
     height: 550px; }
@@ -374,31 +313,26 @@ footer {
     padding-bottom: 2%; }
 
 @media only screen and (max-width: 576px) {
-  .mainCursos {
-    height: 4300px; }
+  #tarjetas {
+    height: 3500px; }
   .fs-lg {
     font-size: 45px; }
-  #tarjetas {
-    height: 81.5%; }
   .col-lg-4 {
     padding-left: 25%; } }
 
 @media only screen and (min-width: 576px) {
-  .mainCursos {
-    height: 4300px; }
   #tarjetas {
-    height: 80.7%;
-    width: 100%; } }
+    height: 3500px; } }
 
 @media only screen and (min-width: 768px) {
-  .mainCursos {
-    height: 2400px; }
   #tarjetas {
-    height: 75%; }
+    height: 1800px; }
   .fs-lg {
-    font-size: 40px; }
-  .col-lg-4 {
-    padding-left: 5% !important; } }
+    font-size: 40px; } }
+
+@media only screen and (min-width: 1200px) {
+  #tarjetas {
+    height: 1500px; } }
 
 .log {
   background-image: linear-gradient(to bottom, white, pink);
@@ -493,9 +427,7 @@ footer {
     width: 250px;
     margin-top: 10%;
     margin-left: 30%;
-    margin-bottom: 10px; }
-  #tarjetas {
-    width: 350px; } }
+    margin-bottom: 10px; } }
 
 .mainRecetas {
   width: 100%;

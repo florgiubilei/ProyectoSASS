@@ -8,7 +8,7 @@
 header{
     position: relative;
     z-index: 10000;
-    background-image: url(img/local.jpg);
+    background-image: url(/img/local.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width:100%;
@@ -20,6 +20,7 @@ header{
         text-align: center;
         width:100%;
         height:100%;
+        padding-top:3rem;
         background-color: $bgcolor;
         .parrafo1{
             font-family: $font2;
@@ -207,6 +208,7 @@ footer{
     }
     #galeria{
         margin-top:5%;
+        padding-bottom:5%;
         width:100%;
         z-index: 1;
         background-color: rgba(255, 166, 0, 0.486);
@@ -229,18 +231,19 @@ footer{
                 font-size:20px;
             }
         }
-        .row.gx-3{
-            position:relative;
-            height:65%;
-            width:100%;
-            display:flex;
-            flex-wrap: wrap; 
+        #imagenes{
+            justify-content:center!important;
+            align-items:center;
             .img-fluid{
                 box-shadow: 0 0 20px black;
-                &:hover{
-                    width:150%;
-                    height:150%;
-                }
+            }
+            #img3{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #img5{
+                margin-top: 10px;
+                margin-bottom: 10px;
             }
         }
     }
@@ -259,8 +262,7 @@ footer{
         margin-top:5%;
     }
     #background-video {
-        width: 93vw;
-        height: 50vh;
+        margin-top:5%;
         object-fit: cover;
         box-shadow: 0 0 20px black;
     }
@@ -282,6 +284,8 @@ footer{
         font-size: 22px;
     }
     iframe{
+        
+        margin-bottom:20px;
         box-shadow: 0 0 20px black;
     }
 }
@@ -289,191 +293,95 @@ footer{
 
 //********** MEDIAQUERIES HOME **********//
 @media only screen and (max-width:576px){
-    .home{
-        height:3250px;
-    }
     #galeria{
-        height:1150px;
-        #img1{
-            position: absolute; 
-            left: 0px; 
-            top: 0px;
-            z-index: 1;
-            }
-        #img2{
-            position: absolute; 
-            left: 275px; 
-            top: 0px;
-            z-index: 1;
+        div.row-justify-content-center{
+            height:250px;
         }
-        #img3{
-            position: absolute; 
-            left: 0px; 
-            top: 405px;
-            z-index: 1;
-            }
-        #img4{
-            position: absolute; 
-            left: 0px; 
-            top: 600px;
-            z-index: 1;
-        }
-        #img5{
-            position: absolute; 
-            left: 275px; 
-            top: 400px;
-            z-index: 1;
-        }
-        #img6{
-            position: absolute; 
-            left: 0px; 
-            top: 790px;
-            z-index: 1;
-        }
-        #img7{
-            position: absolute; 
-            left: 275px; 
-            top: 610px;
-            z-index: 1;
-        }
-        #img8{
-            position: absolute; 
-            left: 275px; 
-            top: 792px;
-            z-index: 1;
+        #imagenes{
+            height:80%;
         }
     }    
-    .horarios{
-        height:43%;
+        #background-video{
+            width: 90vw;
+            height: 40vh;
+        }
         iframe{
             width:90vw;
-            height:60vh;
+            height:50vh;
         }
     }
-}
 @media only screen and (min-width:576px){
-.home{
-    height:3220px;
-}
 #galeria{
-    .row.gx-3{
-        justify-content: center;
-        padding-left:2rem;
-        height:1300px;
-    #img3{
-        width:50%;
-        padding-left:3rem;
-        }
-    #img4{
-        padding-left:3rem;
+    
+    #imagenes{
+        height:88%;
     }
-    #img5{
-        padding-left:2.5rem; 
-    }
-    #img6{
-        padding-left:3rem; 
-    }
-    #img7{
-        padding-left:2.5rem; 
-    }
-    #img8{
-        padding-left:3rem; 
-    }
+
 }
-}
-.horarios{
-    height:38%;
+    #background-video{
+        width:95vw;
+        height:70vh;
+    }
     iframe{
+        
         width:90vw;
-        height:60vh;
+        height:40vh;
     }
-}
 }
 
 @media only screen and (min-width:768px){
-.home{
-    height:3000px;
-    .col-md-5{
+    #inicio{
         border:3px solid white;
     }
-}
-.horarios{
-    height:45%;
-}
+    #background-video{
+        width:95vw;
+        height:70vh;
+    }
+    iframe{ 
+        width:90vw;
+        height:40vh;
+    }
 }
 
 @media only screen and (min-width:992px){
-    .home{
-        height:3550px;
+    #img1 a img{
+        height:630px;
+        margin-left:5%;
     }
-    .horarios{
-        height: 50%;
-        #background-video{
-            margin-left:1.5rem;
-        }
-}
+    #background-video{
+        width:95vw;
+        height:70vh;
+        margin-left:2%;
+    }
 }
 
 @media only screen and (min-width:1200px){
-    .home{
-        height:3750px;
-        #galeria{
-            .row.gx-3{
-                padding-left:5rem;
-                justify-content: center;
-                .img-fluid{
-                    box-shadow: 0 0 20px black;
-                    &:hover{
-                    width:auto;
-                    height:auto;
-                    }
-                }
-                .d-block{
-                    display: flex;
-                    flex-direction:column;
-                    flex-wrap: wrap;
-                    justify-content:center;
-                    
-                }
-                #img1{
-                    height:640px;
-                    position:relative;
-                    .img-fluid{
-                        height:630px;
-                    }
-                }
-                #img3{
-                    margin-left:5%;
-                    width: 33.3333%;
-                }
-                #img4{
-                    width: 33.3333%;
-                    padding-left:0;
-                }
-                #img5{
-                    width: 33.3333%;
-                }
-            }
+
+        #img1{
+            height:630px;
+            padding-left:10%;
+        }
+        #img2{
+            padding-left:10%;
         }
     }
-}
 //********** CURSOS **********//
-
+.headerCursos{
+    background-image: url(../img/local.jpg);
+}
 .mainCursos{
-    padding-top:5%;
     width: 100%;
     background-color:white;
     #introCursos{
         text-align: center;
-        padding-bottom:5%;
         .container-fluid{
-            background-color: rgba(255, 166, 0, 0.719);
+            background-color: rgba(255, 166, 0, 0.486);
         }
         .hr-sm{
                 color: black;
                 height: 3px;
                 width:40%;
-                margin-left: 30%;
+                margin-left:30%;
             }
         .fs-lg{
             font-family: $font6;
@@ -481,9 +389,11 @@ footer{
         .mb-2{
             font-family: $font4;
             font-size: 30px;
+            padding-bottom:5%;
         }
         .mb-0{
             font-family: $font2;
+            padding-bottom:5%;
         }
         div .media-decoration{
             box-shadow: 0 0 20px black;
@@ -491,6 +401,16 @@ footer{
         }
     #tarjetas{
         background-color:rgba(0, 0, 0, 0.514);
+        padding-top:10px;
+        padding-bottom:10px;
+        margin-right: 0;
+        margin-left: 0;
+        .row{
+            width:100%;
+            height:100%;
+            align-content: space-around;
+            justify-content:center;
+        }
     }
     .card{
         box-shadow: 0 0 20px black;
@@ -513,41 +433,33 @@ footer{
 }
 //********** MEDIAQUERIES CURSOS **********//
 @media only screen and (max-width:576px){
-.mainCursos{
-    height: 4300px;
-}
+    #tarjetas{
+        height:3500px;
+    }
 .fs-lg{
     font-size:45px;
-}
-    #tarjetas{
-    height:81.5%;
 }
 .col-lg-4{
     padding-left:25%;
 }
 }
 @media only screen and (min-width:576px){
-    .mainCursos{
-        height: 4300px;
-    }
     #tarjetas{
-        height:80.7%;
-        width:100%;
+        height:3500px;
     }
 }
 @media only screen and (min-width:768px){
-    .mainCursos{
-        height: 2400px;
-    }
     #tarjetas{
-        height:75%;
+        height:1800px;
     }
 .fs-lg{
     font-size:40px;
 }
-.col-lg-4{
-    padding-left:5%!important;
 }
+@media only screen and (min-width:1200px){
+    #tarjetas{
+        height:1500px;
+    }
 }
 //********** INGRESAR *********//
 .log{
@@ -668,9 +580,6 @@ footer{
         margin-top:10%;
         margin-left:30%;
         margin-bottom:10px;
-    }
-    #tarjetas{
-        width:350px;
     }
 }
 
