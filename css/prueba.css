@@ -5,7 +5,7 @@
 header {
   position: relative;
   z-index: 10000;
-  background-image: url(/img/local.jpg);
+  background-image: url(img/local.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
