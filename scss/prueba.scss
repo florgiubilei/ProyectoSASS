@@ -8,7 +8,6 @@
 header{
     position: relative;
     z-index: 10000;
-    background-image: url(/img/local.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width:100%;
@@ -62,7 +61,7 @@ header{
                 font-size: 15px;
             }
             a:hover{
-                color:orange;
+                color:rgba(65, 18, 0, 0.815);
             }
             }
         }
@@ -76,7 +75,7 @@ header{
                 color:white;
                 font-family: $font3;
                 &:hover{
-                    color:orange;
+                    color:rgba(65, 18, 0, 0.815);
                 }
             }
         }
@@ -96,11 +95,23 @@ header{
                 font-size: 15px;
             }
             a:hover{
-                color:orange;
+                color:rgba(65, 18, 0, 0.815);
             }
             }
         }
     }
+}
+.headerHome{
+    background-image: url(/img/bgcoffee.jpg);
+}
+.headerIngresar{
+    background-image: url(../img/bgingresar.jpg);
+}
+.headerCursos{
+    background-image: url(../img/bgcafe.jpg);
+}
+.headerRecetas{
+    background-image: url(../img/bgcafe1.jpg);
 }
 @media only screen and (max-width:576px){
 header{
@@ -169,7 +180,7 @@ footer{
         display: inline-block;
         padding-right: 2rem;
         img:hover{
-            box-shadow: 0 0 20px orange;
+            box-shadow: 0 0 20px rgba(65, 18, 0, 0.815);
             border-radius: 40px;
         }
     }
@@ -187,7 +198,7 @@ footer{
         div{ 
             text-align: center;
             hr{
-                color: orange;
+                color: rgba(65, 18, 0, 0.815);;
                 height: 3px;
                 width:10%;
                 margin-left: 45%;
@@ -211,7 +222,7 @@ footer{
         padding-bottom:5%;
         width:100%;
         z-index: 1;
-        background-color: rgba(255, 166, 0, 0.486);
+        background-color: rgba(65, 18, 0, 0.815);
         .col-12{
             hr{
                 color: black;
@@ -232,8 +243,20 @@ footer{
             }
         }
         #imagenes{
-            justify-content:center!important;
             align-items:center;
+            div{
+                display: flex;
+                justify-content:center;
+            }
+            #miniaturas{
+                padding-left:5%;
+                padding-top:3%;
+                align-items:center;
+                div{
+                    display: flex;
+                    justify-content: center;
+                }
+            }
             .img-fluid{
                 box-shadow: 0 0 20px black;
             }
@@ -255,7 +278,7 @@ footer{
     text-align: center;
     background-color: rgba(128, 128, 128, 0.363);
     hr{
-        color:orange;
+        color:rgba(65, 18, 0, 0.815);
         height:3px;
         width:10%;
         margin-left:45%;
@@ -280,7 +303,7 @@ footer{
         z-index: 1;
     }
     .number:hover{
-        color:orange;
+        color:rgba(65, 18, 0, 0.815);
         font-size: 22px;
     }
     iframe{
@@ -355,27 +378,14 @@ footer{
     }
 }
 
-@media only screen and (min-width:1200px){
-
-        #img1{
-            height:630px;
-            padding-left:10%;
-        }
-        #img2{
-            padding-left:10%;
-        }
-    }
 //********** CURSOS **********//
-.headerCursos{
-    background-image: url(../img/local.jpg);
-}
 .mainCursos{
     width: 100%;
     background-color:white;
     #introCursos{
         text-align: center;
         .container-fluid{
-            background-color: rgba(255, 166, 0, 0.486);
+            background-color: white;
         }
         .hr-sm{
                 color: black;
@@ -399,8 +409,8 @@ footer{
             box-shadow: 0 0 20px black;
         }
         }
-    #tarjetas{
-        background-color:rgba(0, 0, 0, 0.514);
+    #cursosComprar{
+        background-color:rgba(65, 18, 0, 0.815);;
         padding-top:10px;
         padding-bottom:10px;
         margin-right: 0;
@@ -409,28 +419,29 @@ footer{
             width:100%;
             height:100%;
             align-content: space-around;
-            justify-content:center;
-        }
-    }
     .card{
         box-shadow: 0 0 20px black;
         &:hover{
-            box-shadow: 0 0 20px orange;
+            box-shadow: 0 0 20px rgba(65, 18, 0, 0.815);;
         }
         height:550px;
         img{
             height:350px;
         }
         a:hover{
-            color:orange;
+            color:rgba(65, 18, 0, 0.815);;
         }
         }
     .col-lg-4{
+        display: flex;
+        justify-content:center;
         padding-top:2%;
         padding-bottom:2%;
     }
-
 }
+    }
+}
+
 //********** MEDIAQUERIES CURSOS **********//
 @media only screen and (max-width:576px){
     #tarjetas{
@@ -457,62 +468,66 @@ footer{
 }
 }
 @media only screen and (min-width:1200px){
-    #tarjetas{
+    #cursosComprar{
         height:1500px;
     }
 }
 //********** INGRESAR *********//
 .log{
-    background-image: linear-gradient(to bottom, white, pink); 
+    background-image: url(../img/fondobg.jpg);
+    background-color: rgba(8, 8, 8, 0.432);
+    background-size: cover;
+    background-repeat: repeat;
     font-family: 'Quicksand', sans-serif;
     width:100%;
-    height: 1000px;
+    height: 800px;
+    #form{
+        padding-top:30px;
+    }
+    .row{
+        color:white;
+        font-family: $font2;
+        font-size:19px;
+        margin-top:5%;
+        display: flex;
+        align-content: space-between;
+    }
 }
 
 //********** MEDIAQUERIES INGRESAR **********//
-@media only screen and (max-width:480px){
-    #form{
-        margin-top:  50px;
-        padding-top: 50px;
+@media only screen and (max-width:576px){
+    .log{
+        .row{
+            text-align: center;
+            justify-content:center;
+        }
     }
 }
-@media only screen and (min-width:480px){
-    #form{
-        margin-top:  50px;
-        padding-top: 100px;
+@media only screen and (min-width:576px){
+    .log{
+        .row{
+            text-align: center;
+            justify-content:center;
+        }
     }
 }
 @media only screen and (min-width:768px){
-    #form{
-        margin-top:  50px;
-        padding-top: 100px;
-    }
-    #row{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .log{
+        height:900px;
     }
 }
 @media only screen and (min-width:992px){
-    #form{
-        margin-top:  80px;
-        padding-top: 100px;
-    }
-    #row{
-        flex-direction: column;
-        align-items: center;
+    .log{
+        height: 920px;
+    .row{
         text-align: center;
+        justify-content:space-evenly;
     }
 }
-@media only screen and (min-width:1024px){
-    #form{
-        margin-top:  100px;
-        padding-top: 100px;
-    }
-    #row{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+}
+@media only screen and (min-width:1200px){
+    .log{
+        height:1000px;
     }
 }
 
@@ -574,13 +589,13 @@ footer{
 @media only screen and (min-width:1200px){
     .mainTienda{
         height: 3500;
-    }
     .card{
         width:250px;
         margin-top:10%;
         margin-left:30%;
         margin-bottom:10px;
     }
+}
 }
 
 //********** RECETAS **********//
@@ -591,17 +606,6 @@ footer{
     font-family: 'Quicksand', sans-serif;
     padding-top: 20px;
     background-image: linear-gradient(to bottom, white, pink);
-}
-#carouselExampleCaptions.carousel.slide{
-    margin-top:10%;
-    margin-left:5%;
-    margin-right: 5%;
-    box-shadow: 0 0 20px black;
-    border-radius: 20px;
-    & img{
-        border-radius: 20px;
-        height: 100%;   
-    }
 }
 .recetas{
     & h1{
@@ -632,12 +636,9 @@ footer{
 
 //********** MEDIAQUERIES RECETAS **********//
 
-@media only screen and (max-width:480px){
+@media only screen and (max-width:576px){
     .mainRecetas{
         height: 2900px;
-    }
-    #carouselExampleCaptions.carousel.slide{
-        height: 269px;
     }
     .advertencia{
     width: 400px;
@@ -647,12 +648,9 @@ footer{
     padding-top: 5px;
     }
 }
-@media only screen and (min-width:480px){
+@media only screen and (min-width:576px){
     .mainRecetas{
         height: 2900px;
-    }
-    #carouselExampleCaptions.carousel.slide{
-        height: 430px;
     }
     .advertencia{
     width: 500px;
@@ -666,9 +664,6 @@ footer{
     .mainRecetas{
         height: 3300px;
     }
-    #carouselExampleCaptions.carousel.slide{
-        height: 665px;
-    }
 .advertencia{
     width: 600px;
     margin-left: 250px;
@@ -681,9 +676,6 @@ footer{
 @media only screen and (min-width:1200px){
     .mainRecetas{
         height: 4300px;
-    }
-    #carouselExampleCaptions.carousel.slide{
-        height: 665px;
     }
     .advertencia{
     width: 600px;

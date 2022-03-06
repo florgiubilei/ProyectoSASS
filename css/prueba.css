@@ -5,7 +5,6 @@
 header {
   position: relative;
   z-index: 10000;
-  background-image: url(/img/local.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -54,7 +53,7 @@ header {
           font-family: "Merriweather", serif;
           font-size: 15px; }
         header nav .lista li a:hover {
-          color: orange; }
+          color: rgba(65, 18, 0, 0.815); }
     header nav .container-fluid {
       display: flex;
       flex-direction: row;
@@ -65,7 +64,7 @@ header {
         color: white;
         font-family: "Berkshire Swash", cursive; }
         header nav .container-fluid a:hover {
-          color: orange; }
+          color: rgba(65, 18, 0, 0.815); }
     header nav .lista2 {
       list-style: none;
       display: flex;
@@ -81,7 +80,19 @@ header {
           font-family: "Merriweather", serif;
           font-size: 15px; }
         header nav .lista2 li a:hover {
-          color: orange; }
+          color: rgba(65, 18, 0, 0.815); }
+
+.headerHome {
+  background-image: url(/img/bgcoffee.jpg); }
+
+.headerIngresar {
+  background-image: url(../img/bgingresar.jpg); }
+
+.headerCursos {
+  background-image: url(../img/bgcafe.jpg); }
+
+.headerRecetas {
+  background-image: url(../img/bgcafe1.jpg); }
 
 @media only screen and (max-width: 576px) {
   header nav .lista {
@@ -121,7 +132,7 @@ footer {
     display: inline-block;
     padding-right: 2rem; }
     footer .redes li img:hover {
-      box-shadow: 0 0 20px orange;
+      box-shadow: 0 0 20px rgba(65, 18, 0, 0.815);
       border-radius: 40px; }
 
 .home {
@@ -135,7 +146,7 @@ footer {
     .home .pt-7 div {
       text-align: center; }
       .home .pt-7 div hr {
-        color: orange;
+        color: rgba(65, 18, 0, 0.815);
         height: 3px;
         width: 10%;
         margin-left: 45%; }
@@ -153,7 +164,7 @@ footer {
     padding-bottom: 5%;
     width: 100%;
     z-index: 1;
-    background-color: rgba(255, 166, 0, 0.486); }
+    background-color: rgba(65, 18, 0, 0.815); }
     .home #galeria .col-12 hr {
       color: black;
       height: 3px;
@@ -169,8 +180,17 @@ footer {
       color: black;
       font-size: 20px; }
     .home #galeria #imagenes {
-      justify-content: center !important;
       align-items: center; }
+      .home #galeria #imagenes div {
+        display: flex;
+        justify-content: center; }
+      .home #galeria #imagenes #miniaturas {
+        padding-left: 5%;
+        padding-top: 3%;
+        align-items: center; }
+        .home #galeria #imagenes #miniaturas div {
+          display: flex;
+          justify-content: center; }
       .home #galeria #imagenes .img-fluid {
         box-shadow: 0 0 20px black; }
       .home #galeria #imagenes #img3 {
@@ -187,7 +207,7 @@ footer {
     text-align: center;
     background-color: rgba(128, 128, 128, 0.363); }
     .home .horarios hr {
-      color: orange;
+      color: rgba(65, 18, 0, 0.815);
       height: 3px;
       width: 10%;
       margin-left: 45%;
@@ -208,7 +228,7 @@ footer {
       font-size: 20px;
       z-index: 1; }
     .home .horarios .number:hover {
-      color: orange;
+      color: rgba(65, 18, 0, 0.815);
       font-size: 22px; }
     .home .horarios iframe {
       margin-bottom: 20px;
@@ -255,23 +275,13 @@ footer {
     height: 70vh;
     margin-left: 2%; } }
 
-@media only screen and (min-width: 1200px) {
-  #img1 {
-    height: 630px;
-    padding-left: 10%; }
-  #img2 {
-    padding-left: 10%; } }
-
-.headerCursos {
-  background-image: url(../img/local.jpg); }
-
 .mainCursos {
   width: 100%;
   background-color: white; }
   .mainCursos #introCursos {
     text-align: center; }
     .mainCursos #introCursos .container-fluid {
-      background-color: rgba(255, 166, 0, 0.486); }
+      background-color: white; }
     .mainCursos #introCursos .hr-sm {
       color: black;
       height: 3px;
@@ -288,29 +298,30 @@ footer {
       padding-bottom: 5%; }
     .mainCursos #introCursos div .media-decoration {
       box-shadow: 0 0 20px black; }
-  .mainCursos #tarjetas {
-    background-color: rgba(0, 0, 0, 0.514);
+  .mainCursos #cursosComprar {
+    background-color: rgba(65, 18, 0, 0.815);
     padding-top: 10px;
     padding-bottom: 10px;
     margin-right: 0;
     margin-left: 0; }
-    .mainCursos #tarjetas .row {
+    .mainCursos #cursosComprar .row {
       width: 100%;
       height: 100%;
-      align-content: space-around;
-      justify-content: center; }
-  .mainCursos .card {
-    box-shadow: 0 0 20px black;
-    height: 550px; }
-    .mainCursos .card:hover {
-      box-shadow: 0 0 20px orange; }
-    .mainCursos .card img {
-      height: 350px; }
-    .mainCursos .card a:hover {
-      color: orange; }
-  .mainCursos .col-lg-4 {
-    padding-top: 2%;
-    padding-bottom: 2%; }
+      align-content: space-around; }
+      .mainCursos #cursosComprar .row .card {
+        box-shadow: 0 0 20px black;
+        height: 550px; }
+        .mainCursos #cursosComprar .row .card:hover {
+          box-shadow: 0 0 20px rgba(65, 18, 0, 0.815); }
+        .mainCursos #cursosComprar .row .card img {
+          height: 350px; }
+        .mainCursos #cursosComprar .row .card a:hover {
+          color: rgba(65, 18, 0, 0.815); }
+      .mainCursos #cursosComprar .row .col-lg-4 {
+        display: flex;
+        justify-content: center;
+        padding-top: 2%;
+        padding-bottom: 2%; }
 
 @media only screen and (max-width: 576px) {
   #tarjetas {
@@ -331,51 +342,51 @@ footer {
     font-size: 40px; } }
 
 @media only screen and (min-width: 1200px) {
-  #tarjetas {
+  #cursosComprar {
     height: 1500px; } }
 
 .log {
-  background-image: linear-gradient(to bottom, white, pink);
+  background-image: url(../img/fondobg.jpg);
+  background-color: rgba(8, 8, 8, 0.432);
+  background-size: cover;
+  background-repeat: repeat;
   font-family: 'Quicksand', sans-serif;
   width: 100%;
-  height: 1000px; }
+  height: 800px; }
+  .log #form {
+    padding-top: 30px; }
+  .log .row {
+    color: white;
+    font-family: "Allerta Stencil", sans-serif;
+    font-size: 19px;
+    margin-top: 5%;
+    display: flex;
+    align-content: space-between; }
 
-@media only screen and (max-width: 480px) {
-  #form {
-    margin-top: 50px;
-    padding-top: 50px; } }
+@media only screen and (max-width: 576px) {
+  .log .row {
+    text-align: center;
+    justify-content: center; } }
 
-@media only screen and (min-width: 480px) {
-  #form {
-    margin-top: 50px;
-    padding-top: 100px; } }
+@media only screen and (min-width: 576px) {
+  .log .row {
+    text-align: center;
+    justify-content: center; } }
 
 @media only screen and (min-width: 768px) {
-  #form {
-    margin-top: 50px;
-    padding-top: 100px; }
-  #row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center; } }
+  .log {
+    height: 900px; } }
 
 @media only screen and (min-width: 992px) {
-  #form {
-    margin-top: 80px;
-    padding-top: 100px; }
-  #row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center; } }
+  .log {
+    height: 920px; }
+    .log .row {
+      text-align: center;
+      justify-content: space-evenly; } }
 
-@media only screen and (min-width: 1024px) {
-  #form {
-    margin-top: 100px;
-    padding-top: 100px; }
-  #row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center; } }
+@media only screen and (min-width: 1200px) {
+  .log {
+    height: 1000px; } }
 
 .mainTienda {
   width: 100%;
@@ -423,11 +434,11 @@ footer {
 @media only screen and (min-width: 1200px) {
   .mainTienda {
     height: 3500; }
-  .card {
-    width: 250px;
-    margin-top: 10%;
-    margin-left: 30%;
-    margin-bottom: 10px; } }
+    .mainTienda .card {
+      width: 250px;
+      margin-top: 10%;
+      margin-left: 30%;
+      margin-bottom: 10px; } }
 
 .mainRecetas {
   width: 100%;
@@ -435,16 +446,6 @@ footer {
   font-family: 'Quicksand', sans-serif;
   padding-top: 20px;
   background-image: linear-gradient(to bottom, white, pink); }
-
-#carouselExampleCaptions.carousel.slide {
-  margin-top: 10%;
-  margin-left: 5%;
-  margin-right: 5%;
-  box-shadow: 0 0 20px black;
-  border-radius: 20px; }
-  #carouselExampleCaptions.carousel.slide img {
-    border-radius: 20px;
-    height: 100%; }
 
 .recetas h1 {
   text-align: center;
@@ -469,11 +470,9 @@ footer {
   background-color: white;
   height: 150px; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 576px) {
   .mainRecetas {
     height: 2900px; }
-  #carouselExampleCaptions.carousel.slide {
-    height: 269px; }
   .advertencia {
     width: 400px;
     margin-left: 20px;
@@ -481,11 +480,9 @@ footer {
     padding-right: 4px;
     padding-top: 5px; } }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 576px) {
   .mainRecetas {
     height: 2900px; }
-  #carouselExampleCaptions.carousel.slide {
-    height: 430px; }
   .advertencia {
     width: 500px;
     margin-left: 100px;
@@ -496,8 +493,6 @@ footer {
 @media only screen and (min-width: 768px) {
   .mainRecetas {
     height: 3300px; }
-  #carouselExampleCaptions.carousel.slide {
-    height: 665px; }
   .advertencia {
     width: 600px;
     margin-left: 250px;
@@ -509,8 +504,6 @@ footer {
 @media only screen and (min-width: 1200px) {
   .mainRecetas {
     height: 4300px; }
-  #carouselExampleCaptions.carousel.slide {
-    height: 665px; }
   .advertencia {
     width: 600px;
     margin-left: 550px;
